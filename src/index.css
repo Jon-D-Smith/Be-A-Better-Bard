@@ -12,6 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  background-color: #272731;
+}
 
 a {
   font-weight: 500;
@@ -53,6 +56,88 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+.spellcard-container {
+  /* min-height: 20rem; */
+  width: 50rem;
+  border: 1px solid rgba(10,10,10,.3);
+  border-radius: 20px;
+  box-shadow: 10px 10px 1px 1px rgba(0,0,0,.2);
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #7A9E9F;
+  color: #EEF5DB;
+}
+
+.spellcard-container-min {
+  min-height: 3rem;
+  width: 50rem;
+  border: 1px solid rgba(10,10,10,.3);
+  border-radius: 20px;
+  box-shadow: 10px 10px 1px 1px rgba(0,0,0,.2);
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #7A9E9F;
+  color: #EEF5DB;
+}
+
+.spell-attributes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #272731;
+  padding:0.5rem;
+  border-radius: 5px;
+}
+
+.spell-name {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.spell-detail {
+  display:flex;
+  flex-direction: column;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+
+  
+  
+}
+
+.spell-detail p {
+  margin: 0;
+  padding: 0;
+}
+
+.spell-description {
+  background-color: #272731;
+  margin: 0;
+  padding: 1.5rem;
+  border-radius: 5px 5px 0 0;
+  text-align: justify;
+}
+
+.spell-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 200ms ease-in-out;
+}
+
+.spell-expanded {
+  grid-template-rows: 1fr;
+}
+
+.spell-overflow {
+  overflow: hidden;
+}
+
+.spell-content hr {
+ width: calc(100% - 2rem);
+}
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
