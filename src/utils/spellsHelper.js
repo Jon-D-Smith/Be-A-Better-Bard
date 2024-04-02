@@ -1,0 +1,67 @@
+export const spellList = [
+    {
+      id: 1,
+      level: 3,
+      spellName: "Fireball",
+      castingTime: "1 Action",
+      components: "V, S, M",
+      range: "150ft/20ft S",
+      save: "Dexterity",
+      duration: "Instantanious",
+      audio: "src/audio/Set fire to the Rain - Adele (Lyrics).mp4",
+      school: "Evocation",
+      description: "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one. The fire spreads around corners. It ignites flammable objects in the area that aren't being worn or carried. At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
+    }, 
+    {
+      id: 2,
+      level: 2,
+      spellName: "Calm Emotions",
+      castingTime: "1 Action",
+      components: "V, S",
+      range: "60ft",
+      save: "None",
+      duration: "Up to 1 minute (C)",
+      audio: "src/audio/RPG - A Long Way From Home.mp3",
+      school: "Enchantment",
+      description: "You attempt to suppress strong emotions in a group of people. Each humanoid in a 20-foot-radius sphere centered on a point you choose within range must make a Charisma saving throw; a creature can choose to fail this saving throw if it wishes. If a creature fails its saving throw, choose one of the following two effects. You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime. Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise."
+    }, 
+    {
+        id: 3,
+        level: 2,
+        spellName: "Silence",
+        castingTime: "1 Action",
+        components: "V, S",
+        range: "120ft",
+        save: "None",
+        duration: "Up to 10 minutes (C)",
+        audio: "src/audio/The Sound of Silence.mp4",
+        school: "Illusion",
+        description: "For the duration, no sound can be created within or pass through a 20-foot-radius sphere centered on a point you choose within range. Any creature or object entirely inside the sphere is immune to thunder damage, and creatures are deafened while entirely inside it. Casting a spell that includes a verbal component is impossible there."
+      }, 
+      {
+        id: 4,
+        level: 2,
+        spellName: "Crown of madness",
+        castingTime: "1 Action",
+        components: "V, S",
+        range: "120ft",
+        save: "None",
+        duration: "Up to 1 minute (C)",
+        audio: "src/audio/enshadowment.wav",
+        school: "Enchantment",
+        description: "One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes. The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if none are within its reach. On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends."
+      }, 
+      {
+        id: 5,
+        level: 0,
+        spellName: "Vicious Mockery",
+        castingTime: "1 Action",
+        components: "V",
+        range: "60ft",
+        save: "Wisdom",
+        duration: "instantaneous",
+        audio: "src/audio/Your mother was a hamster and your father smelt of elderberries!.mp4",
+        school: "Enchantment",
+        description: "You unleash a string of insults laced with subtle enchantments at a creature you can see within range. If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn. This spell's damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4)."
+      }, 
+  ]

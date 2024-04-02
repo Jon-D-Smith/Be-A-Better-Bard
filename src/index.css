@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,9 +11,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-body {
-  background-color: #272731;
 }
 
 a {
@@ -29,8 +26,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: 1000px;
 }
 
 h1 {
@@ -55,11 +51,30 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+:root {
+  font-family: system-ui, Helvetica, Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+
+body {
+  background-color: #272731;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  place-items: center;
+}
+
 
 .spellcard-container {
   /* min-height: 20rem; */
-  width: 50rem;
+  /* width: 50rem; */
+  max-width: 50rem;
   border: 1px solid rgba(10,10,10,.3);
   border-radius: 20px;
   box-shadow: 10px 10px 1px 1px rgba(0,0,0,.2);
@@ -69,30 +84,23 @@ button:focus-visible {
   color: #EEF5DB;
 }
 
-.spellcard-container-min {
-  min-height: 3rem;
-  width: 50rem;
-  border: 1px solid rgba(10,10,10,.3);
-  border-radius: 20px;
-  box-shadow: 10px 10px 1px 1px rgba(0,0,0,.2);
-  padding: 1rem;
-  margin: 1rem;
-  background-color: #7A9E9F;
-  color: #EEF5DB;
-}
+
 
 .spell-attributes {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
   background-color: #272731;
   padding:0.5rem;
   border-radius: 5px;
+  cursor: pointer;
 }
 
+
 .spell-name {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bolder;
+  min-width: 11rem; 
 }
 
 .spell-detail {
@@ -101,14 +109,11 @@ button:focus-visible {
   margin: auto;
   justify-items: center;
   align-items: center;
-
-  
-  
 }
 
 .spell-detail p {
   margin: 0;
-  padding: 0;
+  padding: 0 .2rem;
 }
 
 .spell-description {
@@ -137,17 +142,77 @@ button:focus-visible {
  width: calc(100% - 2rem);
 }
 
+.spell-playing {
+  animation: glow 1s ease-in-out infinite alternate;
 
+}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Spell Category Styling */
+.category-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  /* background-color: #ac9530; */
+  background-color: #84b86e;
+  margin:.5rem;
+  border-radius: 5px;
+}
+
+.category-box h2 {
+  font-size: 2rem;
+  color: #272731;
+  width:100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.category-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 200ms ease-in-out;
+}
+
+.category-expanded {
+  grid-column: 1fr;
+}
+
+.category-overflow {
+  overflow: hidden;
+}
+
+.icon-hide {
+  opacity: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .spell-name {
+    font-size: x-large;
+    font-weight: bolder;
+    align-items: center;
+    margin-inline: auto;
+    min-width: 0px;
   }
-  a:hover {
-    color: #747bff;
+
+  .spell-detail {
+    font-size: smaller;
+    padding: .3rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .spell-attributes {
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-auto-columns: max-content;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@keyframes glow {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.5;
   }
 }
