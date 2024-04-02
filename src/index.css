@@ -192,20 +192,25 @@ body {
     align-items: center;
     margin-inline: auto;
     min-width: 0px;
+    grid-column: 1/4;
+
   }
 
   .spell-detail {
     font-size: smaller;
-    padding: .3rem;
+    padding: .2rem;
+
   }
 
   .spell-attributes {
     display: grid;
-    grid-auto-rows: max-content;
-    grid-auto-columns: max-content;
+    grid-auto-rows: max-content; 
+    grid-template-columns: repeat(3,1fr);
     align-items: center;
     justify-content: center;
+    
   }
+
 }
 
 @keyframes glow {
